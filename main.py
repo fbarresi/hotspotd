@@ -5,7 +5,7 @@
 import sys
 import os
 import argparse
-import cli
+from hotspotd import cli
 import json
 import socket
 import platform
