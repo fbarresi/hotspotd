@@ -3,10 +3,7 @@
 #@description: Small daemon to create a wifi hotspot on linux
 #@license: MIT
 #python -m hotspotd $*
-try:
-	import hotspotd.main as mainmod
-except ImportError:
-	import main as mainmod
+from hotspotd import main as mainmod
 import sys
 import os
 import argparse
