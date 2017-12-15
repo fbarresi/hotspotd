@@ -43,7 +43,8 @@ def configure():
 	if s!=None:
 		lines = s.splitlines()
 		#print( 'and it is:'  + s)
-		for line in lines:
+		for l in lines:
+			line = str(l)
 			if not line.startswith(' ') and not line.startswith('mon.') and 'IEEE 802.11' in line:
 				wlan=line.split(' ')[0]
 				print( 'Wifi interface found: ' + wlan)
@@ -56,7 +57,8 @@ def configure():
 	s=cli.execute_shell('ifconfig')
 	lines = s.splitlines()
 	iface=[]
-	for line in lines:
+	for l in lines:
+		line = str(l)
 		if not line.startswith(' ') and not line.startswith(wlan) and not line.startswith('lo') and not line.startswith('mon.') and len(line)>0:
 			iface.append(line.split(' ')[0])
 			#print( 'f::' + line)
