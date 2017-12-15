@@ -80,7 +80,7 @@ def configure():
 			break
 	
 	while True:
-		IP= raw_input('Enter an IP address for your ap [192.168.45.1] :')
+		IP= input('Enter an IP address for your ap [192.168.45.1] :')
 		#except: continue
 		#print( type(IP))
 		#sys.exit(0)
@@ -92,9 +92,9 @@ def configure():
 	Netmask='255.255.255.0'
 	
 	#CONFIGURE SSID, PASSWORD, ETC.
-	SSID=raw_input('Enter SSID [joe_ssid] :')
+	SSID=input('Enter SSID [joe_ssid] :')
 	if SSID=='': SSID='joe_ssid'
-	password=raw_input('Enter 10 digit password [1234567890] :')
+	password=input('Enter 10 digit password [1234567890] :')
 	if password=='': password='1234567890'
 	
 	f = open('run.dat','r')
