@@ -112,7 +112,7 @@ def configure():
 	print( 'created hostapd configuration: run.conf')
 	
 	dc = {'wlan': wlan, 'inet':ppp, 'ip':IP, 'netmask':Netmask, 'SSID':SSID, 'password':password}
-	json.dump(dc, open('hotspotd.json','wb'))
+	json.dump(dc, open('hotspotd.json','w'))
 	print( dc)
 	print( 'Configuration saved. Run "hotspotd start" to start the router.')
 	
