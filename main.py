@@ -138,7 +138,8 @@ def check_interfaces():
 	bwlan = False
 	bppp  = False
 	
-	for line in lines:
+	for l in lines:
+		line = str(l)
 		if not line.startswith(' ') and len(line)>0:
 			text=line.split(' ')[0]
 			if text.startswith(wlan):
